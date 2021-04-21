@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">YogaFitClass</string>
+
+    <string name="headline"> Yoga Fit Class </string>
+
+    <string name="tvName"> Ayşe Yılmaz </string>
+
+    <string name="tvStatus"> Beginner, </string>
+
+    <string name="tvResult"> Result </string>
+
+    <string-array name="yogas_title">
+        <item>Baby Cobra</item>
+        <item>Cat</item>
+        <item> Chair </item>
+        <item> Child </item>
+        <item> Corpse </item>
+        <item>  Cow </item>
+        <item>  Downward </item>
+        <item>  Easy Seat </item>
+        <item> Half Seated </item>
+        <item> Half Standing Fold </item>
+        <item> Hero</item>
+        <item> High lunge </item>
+        <item> Locusi</item>
+        <item> Low lunge </item>
+        <item> Mountain</item>
+        <item> Plank </item>
+        <item> Tree </item>
+        <item> Triangle</item>
+        <item> Warrior </item>
+        <item> Warrior II </item>
+
+    </string-array>
+
+
+    <string-array name="tvYogas">
+        <item>Baby Cobra</item>
+        <item>Cat</item>
+        <item> Chair </item>
+        <item> Child </item>
+        <item> Corpse </item>
+        <item>  Cow </item>
+        <item>  Downward </item>
+        <item>  Easy Seat </item>
+        <item> Half Seated </item>
+        <item> Half Standing Fold </item>
+        <item> Hero</item>
+        <item> High lunge </item>
+        <item> Locusi</item>
+        <item> Low lunge </item>
+        <item> Mountain</item>
+        <item> Plank </item>
+        <item> Tree </item>
+        <item> Triangle</item>
+        <item> Warrior </item>
+        <item> Warrior II </item>
+
+    </string-array>
+
+    <string name="exercise"> EXERCISE </string>
+    <string name="settings"> SIGN UP </string>
+    <string name="tvInfo"> Get learn about app </string>
+
+    <string name="datatext"> DATABASE HERE</string>
+
+    <string name="StartBtn"> Start &#9658; </string>
+    <string name="PauseBtn"> Pause &#9611; </string>
+</resources>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/headline" />
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_marginLeft="310dp"
+        android:onClick="TxtClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="198dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:onClick="onClick"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/started_yoga"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="131dp" />
+
+    <RelativeLayout
+        android:layout_width="421dp"
+        android:layout_height="67dp">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="421dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:foregroundGravity="center_vertical">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                style="?android:attr/starStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:onClick="CheckClick"
+                android:text="Weeks Favourite"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="625dp" />
+
+
+        </TableRow>
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageButton
+                android:id="@+id/btnProgress"
+                android:layout_width="190dp"
+                android:layout_height="70dp"
+                android:backgroundTint="#807382"
+                android:onClick="btnProgress"
+                app:srcCompat="@android:drawable/ic_menu_day" />
+
+            <ImageButton
+                android:layout_marginLeft="30dp"
+                android:id="@+id/btnInfo"
+                android:layout_width="190dp"
+                android:layout_height="70dp"
+                android:backgroundTint="#807382"
+                android:onClick="btnInfo"
+                app:srcCompat="@android:drawable/ic_dialog_info" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageButton
+                android:id="@+id/btnYoga"
+                android:layout_width="190dp"
+                android:layout_height="70dp"
+                android:backgroundTint="#807382"
+                android:onClick="YogaClick "
+                app:srcCompat="@drawable/workout"
+                tools:ignore="OnClick" />
+
+            <Button
+                android:id="@+id/btnExercise"
+                android:layout_width="190dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="30dp"
+                android:backgroundTint="#807382"
+                android:gravity="center"
+                android:onClick="BtnClick"
+                android:text="@string/exercise"
+                tools:layout_editor_absoluteX="93dp"
+                tools:layout_editor_absoluteY="526dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="280dp"
+        android:layout_marginBottom="2dp"
+        android:onClick="InfoClick"
+        android:text="@string/tvInfo" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="2dp"
+        android:text="Copyright ©2021 All rights reserved." />
+
+
+</LinearLayout>
