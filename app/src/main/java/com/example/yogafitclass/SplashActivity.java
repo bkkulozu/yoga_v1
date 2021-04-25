@@ -7,7 +7,9 @@ import android.os.Handler;
 import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+/**
+ * Created by Beste Kulozu 214 00 474
+ */
 public class SplashActivity extends AppCompatActivity {
 
     Intent intent;
@@ -26,7 +28,6 @@ public class SplashActivity extends AppCompatActivity {
 
         // Hiding the status bar
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         // Locking the orientation to Portrait
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
@@ -48,9 +49,6 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         }, SPLASH_TIME_OUT);
-
-
-
 
     }
 }

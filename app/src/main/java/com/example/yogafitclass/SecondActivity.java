@@ -22,7 +22,6 @@ public class SecondActivity extends AppCompatActivity {
 
     Intent intent;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,10 +31,8 @@ public class SecondActivity extends AppCompatActivity {
 
         // Hiding title bar using code
         getSupportActionBar().hide();
-
         // Hiding the status bar
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         // Locking the orientation to Portrait
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
@@ -90,33 +87,7 @@ public class SecondActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
-
-
 }
-
-/*
-    public void onClick(View view) {
-        intent = new Intent(this, ThirdActivity.class);
-        //  intent.putExtras(b);
-        startActivity(intent);
-
-    }
-*/
-    /*
-public void onItemClick(View view) {
-    intent = new Intent(this, ThirdActivity.class);
-    Bundle bundle = new Bundle();
-   // bundle.putString("name" , name);
-    intent.putExtras(bundle);
-    startActivity(intent);
-
-}*/
-
-
-        // recyclerYoga.hasFixedSize();
-
-
-
 
 
 

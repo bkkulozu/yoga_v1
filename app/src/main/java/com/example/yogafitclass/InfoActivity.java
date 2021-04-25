@@ -9,7 +9,9 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GestureDetectorCompat;
-
+/**
+ * Created by Beste Kulozu 214 00 474
+ */
 public class InfoActivity extends AppCompatActivity implements GestureType{
     private GestureDetectorCompat mDetector;
 
@@ -30,10 +32,8 @@ public class InfoActivity extends AppCompatActivity implements GestureType{
 
         mDetector = new GestureDetectorCompat(this, new MyGestureListener());
 
-
         intent = getIntent();
         Bundle b = intent.getExtras();
-
 
     }
 
@@ -44,13 +44,17 @@ public class InfoActivity extends AppCompatActivity implements GestureType{
     }
 
     class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
-        Intent intent = new Intent(InfoActivity.this, CountDownActivity.class);
+        Intent intent = new Intent(InfoActivity.this, ThirdActivity.class);
         Bundle bundle = new Bundle();
 
         public boolean onDoubleTap(MotionEvent event) {
             bundle.putInt("key1", LONG_HOLD);
-            intent.putExtras(bundle);
-            startActivity(intent);
+           /* intent.putExtras(bundle);
+            startActivity(intent); */
+            Intent mmintent;
+            mmintent = new Intent(InfoActivity.this, MainActivity.class);
+            //  intent.putExtras(b);
+            startActivity(mmintent);
             return true;
         }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,29 +7,50 @@
     android:layout_height="match_parent"
     tools:context=".FavouriteActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="16dp"
-        android:onClick="onFavClick"
-        android:text="Display weeks favourite"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/relativeLayout1">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewYogi"
-        android:layout_width="373dp"
-        android:layout_height="543dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="100dp"
+            android:hint="@string/todo"
+            android:textAlignment="center" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageButton
+                android:id="@+id/btnAdd"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:backgroundTint="#CD9EA1"
+                android:layout_marginLeft="60dp"
+                app:srcCompat="@drawable/ic_baseline_add_circle_outline_24" />
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:layout_marginLeft="100dp"
+                android:id="@+id/btnView"
+                android:backgroundTint="#CD9EA1"
+                app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
+        </TableRow>
+
+    </RelativeLayout>
+
+</RelativeLayout>

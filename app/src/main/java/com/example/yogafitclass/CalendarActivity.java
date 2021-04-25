@@ -7,9 +7,10 @@ import android.view.View;
 import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+/**
+ * Created by Beste Kulozu 214 00 474
+ */
 public class CalendarActivity extends AppCompatActivity {
-
     Intent intent;
 
     @Override
@@ -18,24 +19,14 @@ public class CalendarActivity extends AppCompatActivity {
         setContentView(R.layout.progress_layout);
 
         // Hiding title bar using code
-        // getSupportActionBar().hide();
-
+        getSupportActionBar().hide();
         // Hiding the status bar
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         // Locking the orientation to Portrait
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-
         intent = getIntent();
         Bundle b = intent.getExtras();
-
-
-    }
-
-    public void btnPrevious(View view) {
-        intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
 
     }
 }

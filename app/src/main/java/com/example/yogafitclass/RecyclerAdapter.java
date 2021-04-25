@@ -20,9 +20,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ImageV
         this.images = images;
     }
 
-    public RecyclerAdapter(List<String> list, RecylerActivity recylerActivity) {
-    }
-
     @NonNull
     @Override
     public ImageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -38,7 +35,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ImageV
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
 
         int image_id = images[position];
-        holder.yogas.setImageResource(image_id);
+       holder.yogas.setImageResource(image_id);
 
     }
 
@@ -51,12 +48,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ImageV
     public static class ImageViewHolder extends RecyclerView.ViewHolder {
 
         ImageView yogas;
-        TextView yogas_title;
+       // TextView yogas_title;
 
         public ImageViewHolder(@NonNull View itemView) {
             super(itemView);
             yogas = itemView.findViewById(R.id.yogas);
-            yogas_title = itemView.findViewById(R.id.yogas_title);
+           // yogas_title = itemView.findViewById(R.id.yogas_title);
 
 
         }

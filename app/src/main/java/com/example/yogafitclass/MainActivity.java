@@ -9,6 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
+/**
+ * Created by Beste Kulozu 214 00 474
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     Intent intent;
@@ -28,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         // Locking the orientation to Portrait
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-
     }
 
     public void onClick(View view) {
@@ -38,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void BtnClick(View view) {
+    public void BtnExerciseClick(View view) {
         intent = new Intent(this, ExerciseActivity.class);
         //  intent.putExtras(b);
         startActivity(intent);
@@ -51,26 +54,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-   /* public void btnProfile(View view) {
-        intent = new Intent(this, ProfileActivity.class);
-        //  intent.putExtras(b);
-        startActivity(intent);
-    } */
-
 
     public void btnProgress(View view) {
         intent = new Intent(this, CalendarActivity.class);
         //  intent.putExtras(b);
         startActivity(intent);
-
-
-    }
-
-    public void YogaClick(View view) {
-        intent = new Intent(this, RecylerActivity.class);
-        startActivity(intent);
-
-
     }
 
 
@@ -79,8 +67,6 @@ public class MainActivity extends AppCompatActivity {
         intent = new Intent(this, InfoActivity.class);
         //  intent.putExtras(b);
         startActivity(intent);
-
-
     }
 
     public void TxtClick(View view) {

@@ -12,29 +12,22 @@
         android:orientation="vertical"
         tools:layout_editor_absoluteY="405dp">
 
-        <Button
-            android:id="@+id/btnBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#CD9EA1"
-            android:onClick="btnPrevious"
-            android:text="&lt;"
-            tools:ignore="MissingConstraints" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="591dp"
             android:orientation="vertical">
 
-            <ProgressBar
-                android:id="@+id/progressBar3"
-                style="?android:attr/progressBarStyle"
+            <TextView
+                android:id="@+id/tvProgress"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                tools:text="@string/tvProgress" />
 
-            <ProgressBar
-                android:id="@+id/progressBar2"
-                style="?android:attr/progressBarStyleHorizontal"
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -51,7 +44,7 @@
                         android:id="@+id/calendarView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="160dp" />
+                        android:layout_marginTop="140dp" />
 
                 </androidx.cardview.widget.CardView>
 

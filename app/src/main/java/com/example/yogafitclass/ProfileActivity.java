@@ -7,7 +7,9 @@ import android.view.View;
 import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+/**
+ * Created by Beste Kulozu 214 00 474
+ */
 public class ProfileActivity extends AppCompatActivity {
 
     Intent intent;
@@ -16,7 +18,7 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_after_signup);
 
         // Hiding title bar using code
         getSupportActionBar().hide();
@@ -27,7 +29,6 @@ public class ProfileActivity extends AppCompatActivity {
         // Locking the orientation to Portrait
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-
         intent = getIntent();
         Bundle b = intent.getExtras();
 
@@ -35,11 +36,8 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void btnPrevious(View view) {
-
         intent = new Intent(this, MainActivity.class);
         //  intent.putExtras(b);
         startActivity(intent);
-
-
     }
 }

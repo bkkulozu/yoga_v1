@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.yogafitclass">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,30 +19,24 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"/>
-
         <activity android:name=".SecondActivity"/>
 
         <activity android:name=".ThirdActivity"/>
-
         <activity android:name=".ExerciseActivity"/>
 
         <activity android:name=".FavouriteActivity"/>
-
         <activity android:name=".ProfileActivity"/>
 
         <activity android:name=".CalendarActivity"/>
-
-        <activity android:name=".HomePageActivity"/>
+        <activity android:name=".AfterSignUp"/>
 
         <activity android:name=".SignUpActivity"/>
-
-        <activity android:name=".RecylerActivity"/>
-
         <activity android:name=".InfoActivity"/>
 
-        <activity android:name=".YogaInfoActivity"/>
-
         <activity android:name=".CountDownActivity"/>
+
+        <activity android:name=".EditDataActivity"/>
+        <activity android:name=".ListDataActivity"/>
 
 
     </application>

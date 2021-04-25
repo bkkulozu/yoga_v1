@@ -8,7 +8,9 @@ import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+/**
+ * Created by Beste Kulozu 214 00 474
+ */
 public class ExerciseActivity extends AppCompatActivity {
 
     Intent mIntent;
@@ -23,9 +25,7 @@ public class ExerciseActivity extends AppCompatActivity {
 
 
     private RecyclerAdapter adapter;
-
     private RecyclerView.LayoutManager layoutManager;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,18 +34,16 @@ public class ExerciseActivity extends AppCompatActivity {
 
         // Hiding title bar using code
         getSupportActionBar().hide();
-
         // Hiding the status bar
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         // Locking the orientation to Portrait
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
 
         recyclerView = findViewById(R.id.recyclerView);
         layoutManager = new GridLayoutManager(this, 2);
 
         recyclerView.setHasFixedSize(true);
-
         recyclerView.setLayoutManager(layoutManager);
 
         adapter = new RecyclerAdapter(images);
@@ -54,9 +52,5 @@ public class ExerciseActivity extends AppCompatActivity {
         mIntent = getIntent();
         Bundle mBundle = mIntent.getExtras();
 
-
-
-
     }
-
 }

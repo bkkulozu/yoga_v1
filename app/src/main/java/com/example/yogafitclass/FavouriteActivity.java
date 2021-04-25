@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -18,13 +22,17 @@ import java.util.ArrayList;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+/**
+ * Created by Beste Kulozu 214 00 474
+ */
 public class FavouriteActivity extends AppCompatActivity {
 
-    DatabaseHelper dbHelper;
+    private static final String TAG = "FavouriteActivity";
 
-    RecyclerView recyclerViewYogi;
-    ArrayList<Yogi> yogiList;
+    DatabaseHelper mDatabaseHelper;
+    //private Button btnAdd, btnViewData;
+    private EditText editText;
+    private ImageButton btnAdd, btnViewData;
 
     Intent intent;
     Bundle b;
@@ -34,63 +42,61 @@ public class FavouriteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favourite);
 
-        recyclerViewYogi = findViewById(R.id.recyclerViewYogi);
+        editText = (EditText) findViewById(R.id.editText);
+        btnAdd = (ImageButton) findViewById(R.id.btnAdd);
+        btnViewData = (ImageButton) findViewById(R.id.btnView);
+        mDatabaseHelper = new DatabaseHelper(this);
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String newEntry = editText.getText().toString();
+                if (editText.length() != 0) {
+                    AddData(newEntry);
+                    editText.setText("");
+                } else {
+                    toastMessage("You must put something in the text field!");
+                }
+
+            }
+        });
+
+        btnViewData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FavouriteActivity.this, ListDataActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // Hiding title bar using code
-        // getSupportActionBar().hide();
-
+        getSupportActionBar().hide();
         // Hiding the status bar
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         // Locking the orientation to Portrait
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-
         intent = getIntent();
         Bundle b = intent.getExtras();
-
-
-        try {
-            String fileToDatabase = "/data/data/" + getPackageName() + "/databases/"+DatabaseHelper.DATABASE_NAME;
-            File file = new File(fileToDatabase);
-            File pathToDatabasesFolder = new File("/data/data/" + getPackageName() + "/databases/");
-            if (!file.exists()) {
-                pathToDatabasesFolder.mkdirs();
-                Log.d("BURDA", "BURDA");
-                CopyDB( getResources().getAssets().open(DatabaseHelper.DATABASE_NAME+".db"),
-                        new FileOutputStream(fileToDatabase));
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        dbHelper = new DatabaseHelper(this);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerViewYogi.setLayoutManager(layoutManager);
     }
 
-    public void CopyDB(InputStream inputStream, OutputStream outputStream) throws IOException {
-        // Copy 1K bytes at a time
-        byte[] buffer = new byte[1024];
-        int length;
-        Log.d("BURDA", "BURDA2");
+    public void AddData(String newEntry) {
+        boolean insertData = mDatabaseHelper.addData(newEntry);
 
-        while ((length = inputStream.read(buffer)) > 0) {
-            outputStream.write(buffer, 0, length);
-            Log.d("BURDA", "BURDA3");
+        if (insertData) {
+            toastMessage("Data Successfully Inserted!");
+        } else {
+            toastMessage("Something went wrong");
         }
-        inputStream.close();
-        outputStream.close();
     }
 
-
-    public void onFavClick(View view) {
-        yogiList = YogiDB.getAllYogi(dbHelper);
-
-        MyRecyclerViewAdapter adapter = new MyRecyclerViewAdapter(this, yogiList);
-        recyclerViewYogi.setAdapter(adapter);
-
+    /**
+     * customizable toast
+     * @param message
+     */
+    private void toastMessage(String message){
+        Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
     }
 }
+
+

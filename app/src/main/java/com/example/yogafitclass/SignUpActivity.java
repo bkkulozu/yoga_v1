@@ -11,7 +11,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+/**
+ * Created by Beste Kulozu 214 00 474
+ */
 public class SignUpActivity extends AppCompatActivity {
 
     Intent intent;
@@ -42,10 +44,8 @@ public class SignUpActivity extends AppCompatActivity {
 
         // Hiding title bar using code
         getSupportActionBar().hide();
-
         // Hiding the status bar
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         // Locking the orientation to Portrait
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
@@ -104,7 +104,7 @@ public class SignUpActivity extends AppCompatActivity {
                     else {
 
                         /* Allow the user in to your app by going into the next activity */
-                        startActivity(new Intent(SignUpActivity.this, HomePageActivity.class));
+                        startActivity(new Intent(SignUpActivity.this, AfterSignUp.class));
                     }
 
                 }
@@ -123,7 +123,6 @@ public class SignUpActivity extends AppCompatActivity {
         {
             return true;
         }
-
         return false;
     }
 }

@@ -14,52 +14,78 @@
         tools:layout_editor_absoluteY="-2dp"
         tools:ignore="MissingConstraints">
 
+
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/coundown_logo"
+            android:layout_marginTop="100dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="125dp"
-            android:layout_marginTop="125dp"
-            android:foregroundGravity="center"
+            android:layout_gravity="center"
             android:src="@drawable/babycobra"
             tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/posename"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:text="%posename%" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/mTextField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="%mTextField%"
+            android:textSize="40dp" />
 
-    <TextView
-        android:id="@+id/mTextField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteY="301dp" />
-
-    <FrameLayout
-        android:layout_width="413dp"
-        android:layout_height="390dp"
-        tools:layout_editor_absoluteY="341dp"
-        tools:ignore="MissingConstraints">
-
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="70dp">
-
-            <Button
-                android:id="@+id/StartBtn"
-                android:layout_width="205dp"
-                android:layout_height="wrap_content"
-                android:text="@string/StartBtn" />
+        <FrameLayout
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp">
 
             <Button
-                android:id="@+id/StopBtn"
+                android:id="@+id/startBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/PauseBtn" />
-        </TableRow>
-    </FrameLayout>
+                android:onClick="startClick"
+                android:text="@string/startBtn" />
+
+            <Button
+                android:id="@+id/resumeBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="resumeClick"
+                android:text="@string/resumeBtn" />
+
+            <Button
+                android:id="@+id/pauseBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="pauseClick"
+                android:text="@string/pauseBtn" />
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <ToggleButton
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="185dp"
+                android:layout_marginTop="30dp"
+                android:textOn=""
+                android:textOff=""
+                android:background="@drawable/toggle_selector"
+                android:onClick="onCustomToggleClick" />
+
+        </FrameLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

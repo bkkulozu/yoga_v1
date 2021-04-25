@@ -1,7 +1,5 @@
 package Adapter;
 
-import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.yogafitclass.R;
-import com.example.yogafitclass.RecylerActivity;
 import com.example.yogafitclass.SecondActivity;
-import com.example.yogafitclass.ThirdActivity;
 
 import Models.featuresListModel;
 import androidx.annotation.NonNull;
@@ -70,9 +66,6 @@ public class featuresListAdapter extends RecyclerView.Adapter<featuresListAdapte
             name = itemView.findViewById(R.id.yname);
             logo = itemView.findViewById(R.id.logo);
             relativeLayout = itemView.findViewById(R.id.feature_list);
-
-
-
 
 
         }

@@ -1,0 +1,42 @@
+{
+  "yoga":[
+    {
+      "id" : "Level 1",
+      "headline":"Beginner ",
+      "context":"Level 1 are eager to learn and start experiencing the amazing benefits of a yoga practice.",
+      "content": "Pose: [Easy seat, Tree, Mountain, Hero, Baby cobra, Corpse]"
+
+
+    },
+    {
+      "id": "Level 2",
+      "headline" : "Experienced Beginner",
+      "context": "Level 2 classes are designed for those who have had some exposure to yoga, including an introduction to basic yoga poses and proper alignment. ",
+      "content": "Pose: [Chair, Cat, Child, Triangle, Hero]"
+    },
+    {
+      "id": "Level 3",
+      "headline":" Intermediate",
+      "context":"Level 3 classes are designed for those who have a good understanding of the basic yoga postures, and have begun to explore a wider variety of poses and styles.",
+      "content": "Pose: [Downward, Locusi, Low lunge, Half standing fold, Half seated]"
+    },
+    {
+      "id": "Level 4",
+      "headline":" Advanced-Intermediate",
+      "context":" Level 4 classes are designed for more experienced yogis with a very solid understanding of basic yoga postures who are comfortable performing more advanced poses. ",
+      "content": "Pose: [Downward, Locusi, Low lunge, Half standing fold, Half seated, Peacock, Heron]"
+    },
+    {
+      "id": "Level 5",
+      "headline":" Advanced",
+      "context":"The advanced one is student practices yoga regularly and has begun to master connection of breath with movement.",
+      "content": "Pose: [ Forearm stand, Monkey, Side plank variation,Toe stand ]"
+    },
+    {
+      "id": "Level 6",
+      "headline":" All Levels",
+      "context":"! All Levels classes are suitable for beginners, masters and everyone in between. These classes offer modifications so that you can customize your class to fit your specific needs and level of expertise.",
+      "content": " - "
+    }
+  ]
+}

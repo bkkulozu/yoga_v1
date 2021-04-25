@@ -1,13 +1,11 @@
 <resources>
     <string name="app_name">YogaFitClass</string>
-
     <string name="headline"> Yoga Fit Class </string>
-
     <string name="tvName"> Ayşe Yılmaz </string>
-
     <string name="tvStatus"> Beginner, </string>
-
     <string name="tvResult"> Result </string>
+    <string name="tvSignUp"> Sign Up </string>
+    <string name="tvProgress"> My Progress </string>
 
     <string-array name="yogas_title">
         <item>Baby Cobra</item>
@@ -30,9 +28,7 @@
         <item> Triangle</item>
         <item> Warrior </item>
         <item> Warrior II </item>
-
     </string-array>
-
 
     <string-array name="tvYogas">
         <item>Baby Cobra</item>
@@ -64,6 +60,11 @@
 
     <string name="datatext"> DATABASE HERE</string>
 
-    <string name="StartBtn"> Start &#9658; </string>
-    <string name="PauseBtn"> Pause &#9611; </string>
+    <string name="startBtn"> Start </string>
+    <string name="resumeBtn"> Resume </string>
+    <string name="pauseBtn"> Pause </string>
+
+    <string name="todo"> Add any poses to ☰TODO LIST</string>
+    <string name="username_exp"> Welcome, Ted Mosby</string>
+    <string name="recTitle"> View all exercises</string>
 </resources>
