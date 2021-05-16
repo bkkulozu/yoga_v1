@@ -6,11 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".ExerciseActivity">
 
+    <Button
+        android:id="@+id/button_show_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="155dp"
+        android:text="SHOW ME &#128065;" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recyclerView"
         android:scrollbars="vertical"
-        />
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

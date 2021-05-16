@@ -7,6 +7,8 @@
     <string name="tvSignUp"> Sign Up </string>
     <string name="tvProgress"> My Progress </string>
 
+    <string name="title_recycler"> # </string>
+
     <string-array name="yogas_title">
         <item>Baby Cobra</item>
         <item>Cat</item>
@@ -57,6 +59,7 @@
     <string name="exercise"> EXERCISE </string>
     <string name="settings"> SIGN UP </string>
     <string name="tvInfo"> Get learn about app </string>
+    <string name="tvEvaluate"> Evaluate your progress today !</string>
 
     <string name="datatext"> DATABASE HERE</string>
 
@@ -67,4 +70,15 @@
     <string name="todo"> Add any poses to ☰TODO LIST</string>
     <string name="username_exp"> Welcome, Ted Mosby</string>
     <string name="recTitle"> View all exercises</string>
+
+    <string name="btn_txt">Display Notification</string>
+    <string name="notification_txt">Here are the details for the notification...</string>
+
+    <string name="tvGet"> Click for yoga images  </string>
+    <string name="tvProgression"> See your progress &#11088;  </string>
+
+    <string name="mailto"> kulozub@gmail.com </string>
+    <string name="subject"> Subject </string>
+    <string name="msg"> Message </string>
+    
 </resources>

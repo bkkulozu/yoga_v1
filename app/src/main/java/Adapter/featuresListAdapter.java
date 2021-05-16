@@ -8,8 +8,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.yogafitclass.R;
-import com.example.yogafitclass.SecondActivity;
+import com.example.kulozubeste.R;
+import com.example.kulozubeste.SecondActivity;
 
 import Models.featuresListModel;
 import androidx.annotation.NonNull;

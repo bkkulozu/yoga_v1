@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MailActivity" >
+
+    <EditText
+        android:id="@+id/too"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/mailto"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/too"
+        android:layout_below="@+id/too"
+        android:hint="@string/subject"
+        android:layout_marginTop="18dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/from"
+        android:layout_below="@+id/from"
+        android:layout_marginTop="28dp"
+        android:hint="@string/msg"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/too"
+        android:layout_alignBottom="@+id/too"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:text="To:" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/from"
+        android:layout_alignBottom="@+id/from"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:text="Subject:" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/subject"
+        android:layout_alignBottom="@+id/subject"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:text="Message:" />
+
+    <ImageButton
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        app:srcCompat="@drawable/ic_baseline_send_24"
+        android:layout_alignLeft="@+id/subject"
+        android:layout_below="@+id/subject"
+        android:layout_marginLeft="76dp"
+        android:layout_marginTop="20dp"
+        android:text="Send" />
+
+</RelativeLayout>
